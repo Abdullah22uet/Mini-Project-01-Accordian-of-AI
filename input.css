@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.question-box{
+    margin-top: 20px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(114, 113, 113, 0.534);
+}
+.answer{
+    transition: all 0.4s ease-in;
+}
+.answer.active{
+    height: auto;
+}
+

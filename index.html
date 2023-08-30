@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion - Your All Q/A Are Here</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon/favicon.ico">
+    <!-- for icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="box-border">
+    <section>
+        <div class="">
+            <div class="flex flex-col lg:flex-row">
+                <div class="w-[100%] h-[50vh] lg:sticky lg:top-0 lg:w-[50%] lg:h-[100vh] bg-[url('/images/image.jpg')] bg-cover bg-center">
+                </div>
+
+                <!-- questions and answers  -->
+                <div class="w-[100%] lg:w-[50%] py-20 px-10">
+                    <div>
+                        <h3 class="text-sm font-bold px-3 py-2 bg-[#d99734] text-white rounded-full inline-block">Topic : Artificial Intelligence</h3>
+                        <h2 class="uppercase font-bold text-3xl mt-5">Find the answers to your questions</h2>
+                    </div>
+                    <div class="mt-14">
+                        <!-- 01 question -->
+                        <div class="question-box px-5 py-4">
+                            <div class="flex items-center gap-4 text-[#e0a245] cursor-pointer" id="a" onclick="showAns(event)">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <p>What is Machine Learning ?</p>
+                            </div>
+                            <div class="h-0 overflow-hidden answer active">
+                                <p class="pt-4">Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy. IBM has a rich history with machine learning.</p>
+                            </div>
+                        </div>
+                        <!-- 02 question -->
+                        <div class="question-box px-5 py-4">
+                            <div class="flex items-center gap-4 text-[#e0a245] cursor-pointer" id="a" onclick="showAns(event)">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <p>Enlist the types of Machine Learning ?</p>
+                            </div>
+                            <div class="h-0 overflow-hidden answer">
+                                <p class="pt-4">
+                                    The four types of Machine Learning are:
+                                    <ul class="px-2">
+                                        <li><b>1. </b>Supervised Learning</li>
+                                        <li><b>2. </b>Unsupervised Learning</li>
+                                        <li><b>3. </b>Semi-supervised Learning</li>
+                                        <li><b>4. </b>Reinforcement Learning</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 03 question -->
+                        <div class="question-box px-5 py-4">
+                            <div class="flex items-center gap-4 text-[#e0a245] cursor-pointer" id="a" onclick="showAns(event)">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <p>What is Deep Learning ?</p>
+                            </div>
+                            <div class="h-0 overflow-hidden answer animate">
+                                <p class="pt-4">Deep learning is a method in artificial intelligence (AI) that teaches computers to process data in a way that is inspired by the human brain. Deep learning models can recognize complex patterns in pictures, text, sounds, and other data to produce accurate insights and predictions.</p>
+                            </div>
+                        </div>
+                        <!-- 04 question -->
+                        <div class="question-box px-5 py-4">
+                            <div class="flex items-center gap-4 text-[#e0a245] cursor-pointer" id="a" onclick="showAns(event)">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <p>Scope of Artificial Intelligence in future ?</p>
+                            </div>
+                            <div class="h-0 overflow-hidden answer">
+                                <p class="pt-4">The scope of a bright artificial intelligence future can fuel the development of autonomous vehicles in various industries. Algorithmic Trainer / Click Worker - They work with AI algorithms and train them to recognize instructions, emotions, moods, images, speech, etc.</p>
+                            </div>
+                        </div>
+                        <!-- 05 question -->
+                        <div class="question-box px-5 py-4">
+                            <div class="flex items-center gap-4 text-[#e0a245] cursor-pointer" id="a" onclick="showAns(event)">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <p>How I can learn Artificial Intelligence ?</p>
+                            </div>
+                            <div class="h-0 overflow-hidden answer">
+                                <p class="pt-4">You can learn artificial intelligence by taking an online course or enrolling in a data science bootcamp. Many bootcamps provide an introduction to machine learning. Machine learning is a tool that AI uses that involves exposing an algorithm to a large amount of data. It allows the AI to learn faster.</p>
+                            </div>
+                        </div>
+                        <!-- 06 question -->
+                        <div class="question-box px-5 py-4">
+                            <div class="flex items-center gap-4 text-[#e0a245] cursor-pointer" id="a" onclick="showAns(event)">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <p>Why Artificial Intelligence is important? Benifits of AI(Artificial Intelligence)?</p>
+                            </div>
+                            <div class="h-0 overflow-hidden answer">
+                                <p class="pt-4">AI can help improve access to education, healthcare, and clean water, and can also aid in the fight against climate change, poverty, and hunger. However, it is crucial to ensure that AI is developed and used in an ethical and responsible manner, to avoid any unintended negative consequences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Javascript ================== -->
+    <script>
+        var answer = document.getElementsByClassName("answer");
+        var ab = document.querySelectorAll("#a");
+        function showAns(event) {
+            for (item of answer) {
+                item.style.height = '0'; // Reset all answer boxes to collapsed state
+                item.classList.remove("active");
+            }
+            
+            let i = Array.from(ab).indexOf(event.currentTarget);
+            let selectedAnswer = answer[i];
+            
+            if (!selectedAnswer.classList.contains("active")) {
+                selectedAnswer.style.height = selectedAnswer.scrollHeight + 'px';
+                selectedAnswer.classList.add("active");
+            } else {
+                selectedAnswer.style.height = '0';
+                selectedAnswer.classList.remove("active");
+            }
+        }
+        // const first = document.getElementById("first")
+        // const second = document.getElementById("second")
+        // const third = document.getElementById("third")
+        // const fourth = document.getElementById("fourth")
+        // const five = document.getElementById("five")
+        // const six = document.getElementById("six")
+        // const i_first = document.getElementById("i-first")
+        // const i_second = document.getElementById("i-second")
+        // const i_third = document.getElementById("i-third")
+        // const i_fourth = document.getElementById("i-fourth")
+        // const i_five = document.getElementById("i-five")
+        // const i_six = document.getElementById("i-six")
+        // var icon = document.getElementsByClassName("fa-solid")
+        // let i = Array.from(ab).indexOf(event.currentTarget);
+        // let selectedAnswer = icon[i];
+        // selectedAnswer.addEventListener("click",function(){
+        //     selectedAnswer.classList.toggle("fa-chevron-down")
+        // })
+
+
+    </script>
+</body>
+</html>
