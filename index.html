@@ -13,9 +13,10 @@
 
 <body class="box-border">
     <section>
-        <div class="">
+        <div>
             <div class="flex flex-col lg:flex-row">
-                <div class="w-[100%] h-[50vh] lg:sticky lg:top-0 lg:w-[50%] lg:h-[100vh] bg-[url('/images/image.jpg')] bg-cover bg-center">
+                <div class="w-[100%] flex justify-center items-center h-[50vh] lg:sticky lg:top-0 lg:w-[50%] lg:h-[100vh] bg-[#f2f3f5e1]">
+                    <img src="images/image.jpg" alt="loading" class="w-full h-auto lg:rounded-xl">
                 </div>
 
                 <!-- questions and answers  -->
@@ -24,7 +25,7 @@
                         <h3 class="text-sm font-bold px-3 py-2 bg-[#d99734] text-white rounded-full inline-block">Topic : Artificial Intelligence</h3>
                         <h2 class="uppercase font-bold text-3xl mt-5">Find the answers to your questions</h2>
                     </div>
-                    <div class="mt-14">
+                    <div class="mt-14 ">
                         <!-- 01 question -->
                         <div class="question-box px-5 py-4">
                             <div class="flex items-center gap-4 text-[#e0a245] cursor-pointer" id="a" onclick="showAns(event)">
@@ -121,26 +122,6 @@
                 selectedAnswer.classList.remove("active");
             }
         }
-        // const first = document.getElementById("first")
-        // const second = document.getElementById("second")
-        // const third = document.getElementById("third")
-        // const fourth = document.getElementById("fourth")
-        // const five = document.getElementById("five")
-        // const six = document.getElementById("six")
-        // const i_first = document.getElementById("i-first")
-        // const i_second = document.getElementById("i-second")
-        // const i_third = document.getElementById("i-third")
-        // const i_fourth = document.getElementById("i-fourth")
-        // const i_five = document.getElementById("i-five")
-        // const i_six = document.getElementById("i-six")
-        // var icon = document.getElementsByClassName("fa-solid")
-        // let i = Array.from(ab).indexOf(event.currentTarget);
-        // let selectedAnswer = icon[i];
-        // selectedAnswer.addEventListener("click",function(){
-        //     selectedAnswer.classList.toggle("fa-chevron-down")
-        // })
-
-
-    </script>
+        </script>
 </body>
 </html>
